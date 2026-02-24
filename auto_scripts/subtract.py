@@ -1,7 +1,5 @@
-# Simple subtraction program
-# Subtract 9 from 20 and print the result
-
-a = 20
-b = 9
-result = a - b
-print("The result of 20 - 9 is:", result)
+# Program to subtract two numbers
+num1 = 20
+num2 = 9
+result = num1 - num2
+print(f'Subtraction of {num1} and {num2} is {result}')

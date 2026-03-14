@@ -1,16 +1,11 @@
 public class AddNumbers {
-    public static int add(int a, int b) {
-        return a + b;
-    }
-
-    public static int subtract(int a, int b) {
-        return a - b;
-    }
-
     public static void main(String[] args) {
-        int num1 = 10;
-        int num2 = 5;
-        System.out.println("Addition: " + add(num1, num2));
-        System.out.println("Subtraction: " + subtract(num1, num2));
+        int[][] pairs = { {1, 2}, {3, 4}, {5, 6}, {10, 20} };
+        for (int i = 0; i < pairs.length; i++) {
+            int a = pairs[i][0];
+            int b = pairs[i][1];
+            int sum = a + b;
+            System.out.println(a + " + " + b + " = " + sum);
+        }
     }
 }

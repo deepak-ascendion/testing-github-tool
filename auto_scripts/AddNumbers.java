@@ -1,6 +1,6 @@
 /**
- * AddNumbers class with string reversal functionality
- * Updated to include reverseString method
+ * AddNumbers class with enhanced string reversal functionality
+ * Updated to include multiple reverseString methods
  */
 public class AddNumbers {
     
@@ -9,7 +9,7 @@ public class AddNumbers {
         return num1 + num2;
     }
     
-    // Method to reverse a string - NEW FUNCTIONALITY
+    // Method to reverse a string using character array approach
     public String reverseString(String input) {
         if (input == null) {
             return null;
@@ -33,6 +33,14 @@ public class AddNumbers {
         return new String(chars);
     }
     
+    // Alternative method to reverse a string using StringBuilder
+    public String reverseStringBuilder(String input) {
+        if (input == null || input.isEmpty()) {
+            return input;
+        }
+        return new StringBuilder(input).reverse().toString();
+    }
+    
     // Test method
     public static void main(String[] args) {
         AddNumbers calculator = new AddNumbers();
@@ -41,10 +49,13 @@ public class AddNumbers {
         int result = calculator.addNumbers(10, 20);
         System.out.println("Addition result: " + result);
         
-        // Test string reversal
+        // Test string reversal methods
         String original = "Hello World";
-        String reversed = calculator.reverseString(original);
+        String reversed1 = calculator.reverseString(original);
+        String reversed2 = calculator.reverseStringBuilder(original);
+        
         System.out.println("Original: " + original);
-        System.out.println("Reversed: " + reversed);
+        System.out.println("Reversed (method 1): " + reversed1);
+        System.out.println("Reversed (method 2): " + reversed2);
     }
 }

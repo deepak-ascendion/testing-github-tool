@@ -1,8 +1,10 @@
 public class AddNumbers {
-    public static void main(String[] args) {
-        int num1 = 10;
-        int num2 = 20;
-        int sum = num1 + num2;
-        System.out.println("Sum of 10 and 20 is: " + sum);
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    // Method to reverse a string
+    public String reverseString(String input) {
+        return new StringBuilder(input).reverse().toString();
     }
 }
